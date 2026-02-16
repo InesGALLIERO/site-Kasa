@@ -1,0 +1,29 @@
+header {
+  display: flex;                  // met logo et nav sur une ligne
+  justify-content: space-between; // logo à gauche, nav à droite
+  align-items: center;            // centré verticalement
+  padding: 20px 40px;
+
+
+  img {
+    width: 120px;                 // taille du logo
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    gap: 30px;                    // espace entre les liens
+
+    a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s;
+
+      &:hover {
+        text-decoration: underline; // soulignement au survol
+      }
+    }
+  }
+}
