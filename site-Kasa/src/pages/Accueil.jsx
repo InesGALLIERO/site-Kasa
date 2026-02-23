@@ -1,15 +1,34 @@
-import banierAccueil from '../assets/banierAccueil.svg'
+// On importe le composant BanniereAccueil pour afficher la bannière en haut de la page
+import BanniereAccueil from "../components/BanniereAccueil";
 
+// On importe les données des logements depuis le fichier JSON
+// C'est un tableau contenant tous les logements à afficher
+import logements from "../data/logements.json";
 
-function Home() {
+// On importe le composant Gallery qui affichera les cartes des logements
+import Gallery from "../components/Gallery";
+
+// On crée le composant Accueil
+function Accueil() {
+
+  // Le composant retourne du JSX
   return (
-    <main>
-      <section>
-        <img src= {banierAccueil} alt="Banniére de l'accueil"/>
-      </section>
-      
-    </main>
+    <>
+      {/*
+        BanniereAccueil est affiché en haut de la page
+      */}
+      <BanniereAccueil />
+
+      {/*
+        Gallery reçoit la prop "logements"
+        On lui passe le tableau de logements importé depuis le JSON
+        Gallery va ensuite créer une Card pour chaque logement
+      */}
+      <Gallery logements={logements} />
+
+    </>
   );
 }
 
-export default Home;
+// Permet d'utiliser ce composant dans d'autres fichiers
+export default Accueil;

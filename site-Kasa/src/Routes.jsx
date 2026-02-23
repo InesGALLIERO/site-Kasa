@@ -2,9 +2,10 @@ import { Routes, Route } from 'react-router-dom';
 import Accueil from './pages/Accueil';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
-import Header from './pages/Header';
-import Footer from './pages/Footer';
 import Page404 from './pages/Page404';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function RoutesApp() {
   return (
