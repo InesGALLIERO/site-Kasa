@@ -1,0 +1,24 @@
+.page404 {
+  display: flex;
+  flex-direction: column;   // éléments l’un sous l’autre
+  align-items: center;      // centré horizontalement
+  text-align: center;       // centre le texte
+  margin-top: 80px;         // espace en haut de la page
+  gap: 40px;                // espace entre les éléments
+}
+
+.page404 img:first-child {
+  width: 300px;   // taille du 404 
+}
+
+.page404 img:nth-child(2) {
+  width: 600px;   // taille du texte Oups
+  max-width: 90%; // responsive
+}
+
+.page404 a {
+  color: black;
+  text-decoration: underline;
+  font-size: 16px;
+  margin: 20px;
+}

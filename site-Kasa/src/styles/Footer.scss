@@ -1,3 +1,13 @@
 footer{
     background-color: black;
+    display: flex;
+    flex-direction: column;   // éléments l’un sous l’autre
+    align-items: center;      // centré horizontalement
+    text-align: center;       // centre le texte
+    padding: 20px;
+    gap: 20px;
+
+    p{
+        color: azure;
+    }
 }

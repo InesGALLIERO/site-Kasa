@@ -2,6 +2,7 @@
 // Il permet de naviguer entre les pages sans recharger le site
 import { Link } from "react-router-dom";
 
+import "../styles/Card.scss";
 // On crée un composant React appelé Card
 // Il reçoit une prop appelée "logement"
 function Card({ logement }) {

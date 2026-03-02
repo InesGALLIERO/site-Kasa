@@ -1,0 +1,10 @@
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes égales */
+  gap: 20px;
+  background-color: gray;
+  padding: 40px;
+  margin: 40px;
+  border-radius: 10px;
+}
+

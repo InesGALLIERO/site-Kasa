@@ -2,6 +2,8 @@
 // Chaque Card affichera un logement individuel
 import Card from "./Card";
 
+import "../styles/Gallery.scss"
+
 // On crée un composant React appelé Gallery
 // Il reçoit une prop appelée "logements" (liste de logements)
 function Gallery({ logements }) {
