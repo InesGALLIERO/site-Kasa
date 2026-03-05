@@ -5,6 +5,7 @@ import Page404 from './pages/Page404';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Logement from './pages/logement';
 
 function RoutesApp() {
   return (
@@ -16,6 +17,7 @@ function RoutesApp() {
       <Routes>
         <Route path="/" element={<Accueil />} />          {/* URL "/" → page d'accueil */}
         <Route path="/APropos" element={<APropos />} />   {/* URL "/about" → page À propos */}
+        <Route path="/logement/:id" element={<Logement />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
 
