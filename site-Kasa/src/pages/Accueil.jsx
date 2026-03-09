@@ -1,5 +1,5 @@
 // On importe le composant BanniereAccueil pour afficher la bannière en haut de la page
-import BanniereAccueil from "../components/Banniere.jsx";
+import Banniere from "../components/Banniere";
 
 // On importe les données des logements depuis le fichier JSON
 // C'est un tableau contenant tous les logements à afficher
@@ -20,7 +20,7 @@ function Accueil() {
         Ici on indique "accueil"
         → donc la bannière affichée sera celle de l'accueil
       */}
-      <BanniereAccueil type="accueil"/>
+      <Banniere type="accueil"/>
 
       {/*
         Gallery reçoit la prop "logements"

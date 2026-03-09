@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Arrow from "../assets/Arrow.svg"
+import "../styles/slideshow.scss"
 
 function Slideshow ({pictures}) {
     const [indexActuel, setIndexActuel] = useState(0);
@@ -20,8 +21,10 @@ function Slideshow ({pictures}) {
     };
 
     return(
-        <div>
+        <div className="slideshow">
+
             <img 
+                className="slideshow__image"
                 src = {pictures[indexActuel]}
                 alt={`slide ${indexActuel + 1}`}
             />
@@ -30,10 +33,15 @@ function Slideshow ({pictures}) {
         
         {pictures.length > 1 && (
             <>
-                <button onClick={gauche}><img src={Arrow} alt="flèche gauche" /></button>
-                <button onClick={droite}><img src={Arrow} alt="flèche droite" /></button>
+                <button className="slideshow__arrow slideshow__arrow--left" onClick={gauche}>
+                    <img src={Arrow} alt="flèche gauche" />
+                </button>
 
-                <p>
+                <button className="slideshow__arrow slideshow__arrow--right" onClick={droite}>
+                    <img src={Arrow} alt="flèche droite" />
+                </button>
+
+                <p className="slideshow__counter">
                      {indexActuel + 1} / {pictures.length} 
                 </p>
             </>
