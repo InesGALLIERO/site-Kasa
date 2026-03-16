@@ -1,75 +1,79 @@
+@use "./variables.scss" as *;
+
 .logement {
   max-width: 1240px;
   margin: auto;
   padding: 20px;
 
-  // Partie du haut de la page (titre + infos + propriétaire)
+  // Partie du haut de la page
   &__header {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    align-items: flex-start;
   }
 
-  // Style du titre du logement
+  // Titre du logement
   &__title {
     color: #ff6060;
     font-size: 36px;
   }
 
-  // Style de la localisation (ville)
+  // Localisation
   &__location {
     margin-top: 5px;
     font-size: 18px;
   }
 
-  // Conteneur qui contient tous les tags
+  // Conteneur des tags
   &__tags {
     margin-top: 15px;
+    display: flex;
+    gap: 10px;
   }
 
-  // Style d'un tag individuel
+  // Tag individuel
   &__tag {
     background: #ff6060;
     color: white;
     padding: 5px 15px;
     border-radius: 10px;
-    margin-right: 10px;
     font-size: 14px;
   }
 
-  // Bloc qui contient le propriétaire et la note
+  // Bloc host + rating
   &__host-rating {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    gap: 10px;
   }
 
-  // Bloc contenant le nom et la photo du propriétaire
+  // Bloc propriétaire
   &__host {
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-  // Style du nom du propriétaire
+  // Nom du propriétaire
   &__host-name {
     font-size: 16px;
     color: #ff6060;
   }
 
-  // Style de la photo du propriétaire
+  // Photo du propriétaire
   &__host-picture {
     width: 50px;
     height: 50px;
     border-radius: 50%;
   }
 
-  // Bloc qui contient la note du logement
+  // Bloc rating
   &__rating {
     margin-top: 10px;
   }
 
-  // Bloc contenant les menus déroulants (Description et Équipements)
+  // collapses
   &__collapses {
     display: flex;
     gap: 20px;

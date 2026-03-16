@@ -3,6 +3,7 @@
   overflow: hidden;      // empêche l'image de dépasser
   border-radius: 10px;
   height: 300px;
+  position: relative;
 
     .card__image {
       width: 100%;
@@ -10,4 +11,12 @@
       object-fit: cover;
       display: block;
     }
+    
+    .card__title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+  }
 }

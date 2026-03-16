@@ -1,4 +1,4 @@
-// On importe le composant Card que l'on a créé précédemment
+// On importe le composant Card
 // Chaque Card affichera un logement individuel
 import Card from "./Card";
 

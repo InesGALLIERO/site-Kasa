@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import Arrow from "../assets/Arrow.svg"
-import "../styles/slideshow.scss"
+import "../styles/Slideshow.scss"
 
 function Slideshow ({pictures}) {
     const [indexActuel, setIndexActuel] = useState(0);

@@ -2,17 +2,26 @@
 // Cette fonction permet de lire les informations dans l'URL
 import { useParams } from "react-router-dom";
 
+//On importe les données
 // On importe le fichier JSON qui contient la liste de tous les logements
 import logements from "../data/logements.json";
 
+//On importe les composants 
 // On importe le composant qui affiche le carrousel d'images
 import Slideshow from "../components/Slideshow";
+// On importe le composant qui affiche le titre et la localisation 
+import LogementHeader from "../components/LogementHeader";
+// On importe le composant qui affiche les tags du logement
+import Tags from "../components/Tags";
+// On importe le composant qui affiche le nom du propriétaire et la photo 
+import Host from "../components/Host";
+// On importe le composant qui affiche la note du logement 
+import Rating from "../components/Rating";
+// On importe la page collapse qui affiche les menus déroulants pour la description et les équipements
+import Collapse from "../components/Collapse";
 
 // On importe la page d'erreur 404 si le logement n'existe pas
 import Page404 from "./Page404";
-
-// On importe la page d'erreur 404 si le logement n'existe pas
-import Collapse from "../components/Collapse";
 
 // On importe le fichier de style CSS/SCSS de la page logement
 import "../styles/logement.scss"
@@ -61,64 +70,29 @@ function Logement() {
       {/* Composant qui affiche les images du logement */}
       <Slideshow pictures={logement.pictures} />
 
-      {/* Partie du haut de la page (titre, localisation, tags, propriétaire) */}
-      <div className="logement__header">
+      {/* Titre du logement/localisation */}
+      <LogementHeader
+        title={logement.title}
+        location={logement.location}
+      />
 
-        {/* Partie gauche : titre, localisation et tags */}
-        <div className="logement__info">
+      {/* tags*/}
+      <Tags
+        tags={logement.tags}
+      />
 
-          {/* Titre du logement */}
-          <h1 className="logement__title">
-            {logement.title}
-          </h1>
+      {/* propriétaire*/}
+      <Host
+        name={hostName} 
+        picture={hostPicture}     
+      />
 
-          {/* Ville ou localisation du logement */}
-          <p className="logement__location">
-            {logement.location}
-          </p>
+      {/* note*/}
+      <Rating
+        rating={logement.rating}
+      />
 
-          {/* Liste des tags du logement */}
-          <div className="logement__tags">
-
-            {/* map parcourt la liste des tags */}
-            {/* et crée un élément pour chaque tag */}
-            {logement.tags.map((tag, index) => (
-
-              // Chaque tag est affiché dans un span
-              <span key={index} className="logement__tag">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* Partie droite : propriétaire et note */}
-        <div className="logement__host-rating">
-
-          {/* Informations sur le propriétaire */}
-          <div className="logement__host">
-
-            {/* Nom du propriétaire */}
-            <p className="logement__host-name">{hostName}</p>
-
-            {/* Photo du propriétaire */}
-            <img
-              src={hostPicture} // chemin de l'image
-              alt={hostName} // texte alternatif si l'image ne charge pas
-              className="logement__host-picture"
-            />
-          </div>
-          
-          {/* Note du logement */}
-          <div className="logement__rating">
-            {logement.rating} / 5
-          </div>
-
-        </div>
-
-      </div>
-
-      {/* Partie avec les menus déroulants */}
+      {/* menus déroulants */}
       <div className="logement__collapses">
 
         {/* Menu déroulant pour la description */}
