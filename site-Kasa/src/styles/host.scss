@@ -1,3 +1,4 @@
+@use "./variables.scss" as *;
 .logement__host {
   display: flex;
   align-items: center;
@@ -6,7 +7,7 @@
 
 .logement__host-name {
   font-size: 16px;
-  color: #ff6060;
+  color: $color-primary;
 }
 
 .logement__host-picture {

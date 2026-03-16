@@ -70,27 +70,38 @@ function Logement() {
       {/* Composant qui affiche les images du logement */}
       <Slideshow pictures={logement.pictures} />
 
-      {/* Titre du logement/localisation */}
-      <LogementHeader
-        title={logement.title}
-        location={logement.location}
-      />
 
-      {/* tags*/}
-      <Tags
-        tags={logement.tags}
-      />
+      <div className="logement__info">
 
-      {/* propriétaire*/}
-      <Host
-        name={hostName} 
-        picture={hostPicture}     
-      />
+        <div className="logement__info--left">
+          {/* Titre du logement/localisation */}
+          <LogementHeader
+          title={logement.title}
+          location={logement.location}
+          />
 
-      {/* note*/}
-      <Rating
-        rating={logement.rating}
-      />
+          {/* tags*/}
+          <Tags
+          tags={logement.tags}
+          />
+        </div>
+
+        <div className="logement__info--right">
+          {/* propriétaire*/}
+          <Host
+            name={hostName} 
+            picture={hostPicture}     
+          />
+
+          {/* note*/}
+          <Rating
+            rating={logement.rating}
+          />
+        </div>  
+
+      </div>
+      
+
 
       {/* menus déroulants */}
       <div className="logement__collapses">

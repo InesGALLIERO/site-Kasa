@@ -1,3 +1,5 @@
+@use "../styles/variables.scss" as *;
+
 .card {
   display: block;        // important pour un Link
   overflow: hidden;      // empêche l'image de dépasser
@@ -16,7 +18,9 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: white;
+    color: $color-white;
     font-size: 18px;
   }
 }
+
+

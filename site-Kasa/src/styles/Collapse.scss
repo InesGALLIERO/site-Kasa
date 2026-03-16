@@ -1,5 +1,6 @@
+@use "./variables.scss" as *;
 .collapse {
-    max-width: 1000px; // largeur maximale du collapse
+
     width: 90%;        // largeur responsive
     margin: 0 auto 20px auto; // centrer horizontalement + marge basse
   .collapse-header {
@@ -7,21 +8,24 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: #ff6060;
-    color: white;
+    background-color: $color-primary;
+    color: $color-white;
     border: none;
     padding: 15px;
     cursor: pointer;
+    border-radius: 10px;
   }
 
+  /* état fermé : flèche normale */
   .arrow {
     transition: transform 0.3s ease;
+     transform: rotate(180deg);         // état fermé
   }
 
   .arrow.rotate {
-    transform: rotate(180deg);
+    transform: rotate(0deg);       // état ouvert
   }
-
+  
   .collapse-content {
     max-height: 0;
     overflow: hidden;
@@ -31,6 +35,16 @@
     &.open {
       max-height: 500px;
       
+      
     }
+  }
+}
+@media (max-width: 768px) {
+  .logement__collapses{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 10px;
+    
   }
 }

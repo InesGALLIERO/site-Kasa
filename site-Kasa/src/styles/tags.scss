@@ -1,11 +1,13 @@
+@use "../styles/variables.scss" as *;
+
 .logement__tags {
   display: flex;
   gap: 10px;
 }
 
 .logement__tag {
-  background: #ff6060;
-  color: white;
+  background: $color-primary;
+  color: $color-white;
   padding: 5px 15px;
   border-radius: 10px;
   font-size: 14px;

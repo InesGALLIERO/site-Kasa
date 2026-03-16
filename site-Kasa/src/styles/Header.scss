@@ -1,18 +1,22 @@
 header {
-  display: flex;                  // met logo et nav sur une ligne
-  justify-content: space-between; // logo à gauche, nav à droite
-  align-items: center;            // centré verticalement
-  padding: 40px ;
+margin: 40px;
+display: flex;
 
-
+  .header__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
   img {
     width: 120px;                 // taille du logo
     height: auto;
   }
 
   nav {
+    margin-left: auto;  // pousse la nav à droite
+    gap: 30px;
     display: flex;
-    gap: 30px;                    // espace entre les liens
+
 
     a {
       text-decoration: none;
@@ -27,3 +31,4 @@ header {
     }
   }
 }
+

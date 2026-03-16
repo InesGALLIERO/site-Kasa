@@ -6,7 +6,7 @@ function LogementHeader({title, location}){
     return(
 
         //div qui contient les informations du logement
-        <div className="logement__info">
+        <div>
 
             {/* Titre du logement */}
             {/* {title} affiche la valeur envoyé par le parent */}

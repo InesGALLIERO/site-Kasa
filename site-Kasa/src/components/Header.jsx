@@ -5,12 +5,14 @@ import '../styles/Header.scss';
 function Header() {
   return (
     <header>
-      <img src={logo} alt='logo Kasa' />
+      <div className="header__container">
+        <img src={logo} alt='logo Kasa' />
 
-      <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/APropos">A propos</Link>
-      </nav>
+        <nav>
+          <Link to="/">Accueil</Link>
+          <Link to="/APropos">A propos</Link>
+        </nav>
+      </div>
     </header>
   )
 }

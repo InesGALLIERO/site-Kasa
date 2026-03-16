@@ -23,7 +23,12 @@ function Banniere({ type }) {
   // src reçoit l'image choisie dynamiquement
   // alt est le texte alternatif pour l’accessibilité
   return (
-    <img src={image} alt="Bannière" className="Banniere" />
+     <div
+      className={`Banniere ${type === "apropos" ? "apropos" : ""}`}
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      {type !== "apropos" && <h1>Chez vous, partout et ailleurs</h1>}
+    </div>
   );
 }
 
