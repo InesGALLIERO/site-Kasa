@@ -11,3 +11,11 @@ footer{
         color: azure;
     }
 }
+
+@media (max-width: 768px) {
+    footer {
+      margin-top: 30px;
+    }
+  }
+
+  

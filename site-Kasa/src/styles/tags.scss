@@ -11,4 +11,13 @@
   padding: 5px 15px;
   border-radius: 10px;
   font-size: 14px;
+
+}
+
+@media (max-width: 768px) {
+  .logement__tag{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
 }
