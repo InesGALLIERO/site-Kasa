@@ -1,34 +1,48 @@
+//Style de la bannière (image d'en-tête)
 .Banniere {
-  margin: 40px;
-  height: 220px;               
-  border-radius: 10px;
-  background-size: cover;
-  background-position: center;
+  margin: 40px; //Espace autour de la bannière
+  height: 220px; //Hauteur fixe de la bannière 
+
+  border-radius: 10px; //Coins arrondis
+
+  background-size: cover; //L'image remplit toute la zone
+  background-position: center; //Centre l'image
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  justify-content: center; //centre horizontalement le contenu (le texte)
+  align-items: center; //Centre verticalement 
+
+  position: relative; //Permet de positionner des éléments par-dessus
 
    // overlay sombre seulement si ce n'est pas la page À propos
   &:not(.apropos)::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
-    border-radius: 10px;
+
+    content: ""; //Obligatoire pour afficher le pseudo-élément
+
+    position: absolute; //Se place par-dessus la bannière
+    inset: 0; //Prend toute la taille (haut, bas, gauche, droite = 0)
+
+    background: rgba(0, 0, 0, 0.3); //Couche noire transparente (assombrit la bannière)
+
+    backdrop-filter: blur(2px); //Flou de l'arrière-plan (effet de flou sur l'image)
+
+    border-radius: 10px; //Même arrondi que la bannière pour que l'overlay suive les contours
   }
+
+  //Style du texte (le titre)
   h1 {
-    position: relative;       
-    color: white;
+    position: relative; //Permet de passer AU-DESSUS de l'overlay
+
+    color: white; //Texte en blanc
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 500; //Poids de la police (500 = semi-gras)
     text-align: center;
-    z-index: 1;               
+
+    z-index: 1; //Passe au-dessus du fond sombre             
   }
 }
 @media (max-width: 768px) {
-    .Banniere {
-      margin: 15px;
-    }
+  .Banniere {
+    margin: 15px;
   }
+}

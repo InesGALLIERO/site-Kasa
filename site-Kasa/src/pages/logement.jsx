@@ -23,7 +23,7 @@ import Collapse from "../components/Collapse";
 // On importe la page d'erreur 404 si le logement n'existe pas
 import Page404 from "./Page404";
 
-// On importe le fichier de style CSS/SCSS de la page logement
+// On importe le fichier de style SCSS de la page logement
 import "../styles/logement.scss"
 
 
@@ -31,8 +31,6 @@ import "../styles/logement.scss"
 // Ce composant va afficher la page d'un logement
 function Logement() {
 
-  // Création du composant Logement
-  // Ce composant va afficher la page d'un logement
   const params = useParams();
 
   // On récupère l'id contenu dans l'URL

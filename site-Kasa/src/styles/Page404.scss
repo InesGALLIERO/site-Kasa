@@ -1,24 +1,59 @@
+@use "../styles/variables.scss" as *;
 .page404 {
+
   display: flex;
-  flex-direction: column;   // éléments l’un sous l’autre
+  flex-direction: column;   // Met les élements en colonne
+  
   align-items: center;      // centré horizontalement
   text-align: center;       // centre le texte
+
   margin-top: 80px;         // espace en haut de la page
-  gap: 40px;                // espace entre les éléments
-}
+  
+  gap: 80px;                // espace entre les éléments
 
-.page404 img:first-child {
+  //Première image (404)
+  img:first-child {
   width: 300px;   // taille du 404 
-}
+  } 
 
-.page404 img:nth-child(2) {
-  width: 600px;   // taille du texte Oups
-  max-width: 90%; // responsive
-}
+  .oups{
+    color: $color-primary;
+  }
 
-.page404 a {
+  //lien pour retourner à l'accueil
+  a {
   color: black;
   text-decoration: underline;
   font-size: 16px;
-  margin: 20px;
+  margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .page404{
+
+    margin-left: 30px;  // espace à gauche de la page
+    margin-right: 30px; // espace à droite de la page
+
+    //Première image (404)
+    .page404 img:first-child {
+    width: 200px;   // taille du 404 
+    } 
+
+    //Deuxième image (Oups)
+    .oups {
+      // responsive
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    //lien pour retourner à l'accueil
+    a {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+  
 }

@@ -1,53 +1,65 @@
+//On importe les variables
 @use "./variables.scss" as *;
+
+//Le bloc principal du composant collapse
 .collapse {
 
-    width: 90%;        // largeur responsive
-    margin: 20px auto; // centré horizontalement
+    width: 90%;        // le bloc prend 90% de la larger de l'écran.
+    margin: 20px auto; // centré le bloc horizontalement
+
+  //Partie cliquable (le bouton avec le titre)
   .collapse-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; //Met les éléments sur une ligne
+    justify-content: space-between; //Espace entre le txte et la flèche
+    align-items: center; //Centre verticalment 
+
     width: 100%;
-    background-color: $color-primary;
-    color: $color-white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 10px;
+    background-color: $color-primary; //Couleur de fond 
+    color: $color-white; //Texte en blanc
+
+    border: none; //Pas de bordure
+    padding: 15px; //Espace intérieur 
+    cursor: pointer; //Curseur devient une main (cliquable)
+    border-radius: 10px; //Coins arrondis 
   }
 
-  /* état fermé : flèche normale */
+  //Fléche (état fermé)
   .arrow {
-    transition: transform 0.3s ease;
-     transform: rotate(180deg);         // état fermé
+    transition: transform 0.3s ease; //Animation
+     transform: rotate(180deg); //Fléche vers le bas (état fermé)
   }
 
+  //Fléche (état ouvert)
   .arrow.rotate {
-    transform: rotate(0deg);       // état ouvert
+    transform: rotate(0deg); //Fléche vers le haut (état ouvert)
   }
   
+  //Contenu (le texte caché)
   .collapse-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    margin: 15px;
+    max-height: 0; //Hauteur = 0 => contenu caché
+    overflow: hidden; //Cache ce qui dépasse
+    transition: max-height 0.4s ease; // Animation ouverture/fermeture
+    margin: 15px; //Espace autour du contenu
     
+    //Quand on ajoute la classe "open" 
     &.open {
-      max-height: 500px;
+      max-height: 500px; //le bloc s'ouvre (devient vissible)
       
       
     }
   }
 }
+
+//versions mobiles
 @media (max-width: 768px) {
 
   .collapse{
-    width: 100%;
+    width: 100%; //Prend toute la largeur de l'écran
     margin-bottom: 0px;
     margin-top: 0px;
   }
   .logement__collapses{
     
-    flex-direction: column;
+    flex-direction: column; //les éléments passent en collonne
   }
 }

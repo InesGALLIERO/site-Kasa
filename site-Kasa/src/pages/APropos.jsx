@@ -27,6 +27,7 @@ function APropos() {
       <Banniere type="apropos" />
 
       {collapseData.map((item, index) => (
+        
         <Collapse
           key={index}
           title={item.title}
