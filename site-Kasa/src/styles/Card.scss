@@ -1,11 +1,12 @@
+//On importe les variables du fichier variables.scss pour pouvoir les utiliser dans ce style.
 @use "../styles/variables.scss" as *;
 
 .card {
-  display: block;        // important pour un Link
+  display: block;        // fait que la carte s'affiche comme un bloc
   overflow: hidden;      // empêche l'image de dépasser
   border-radius: 10px;
   height: 300px;
-  position: relative;
+  position: relative; //Permet de placer le titre par dessus l'image
 
     .card__image {
       width: 100%;
@@ -15,10 +16,10 @@
     }
     
     .card__title {
-    position: absolute;
+    position: absolute; //Place le titre par dessus l'image
     bottom: 10px;
     left: 10px;
-    color: $color-white;
+    color: $color-white; //Couleur du texte (Variable blanche)
     font-size: 18px;
   }
 }

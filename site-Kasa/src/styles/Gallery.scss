@@ -1,18 +1,19 @@
+//On importe les variables
 @use "./variables.scss" as *;
 .gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes égales */
-  gap: 30px;
-  background-color: #EDECEB;
-  padding: 40px;
-  margin: 40px;
+  display: grid; // Utilisation de CSS Grid
+  grid-template-columns: 1fr 1fr 1fr; // crée 3 colonnes de largeur égale
+  gap: 30px; //Espace de 30px entre les élements 
+  background-color: #EDECEB; //Couleur de fond
+  padding: 40px; //Espace à l'interieur du bloc
+  margin: 40px; //Espace à l'exterieur du bloc
   border-radius: 10px;
 }
 @media (max-width: 768px) {
   .gallery {
     display: flex;
-    flex-direction: column;
-    background-color: $color-white;
+    flex-direction: column; //les éléments se pacent en colonne
+    background-color: $color-white; 
     padding: 0px;
     padding-top: 15px;
     margin: 15px;

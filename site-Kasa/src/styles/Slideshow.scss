@@ -1,48 +1,49 @@
+//On importe les mixins (petits morceaux de code réutilisables)
 @use "./mixins" as *;
 
 .slideshow {
-  position: relative;
-  width: 100%;
-  height: 415px;
+  position: relative; //Permet de positionner les éléments (les flèches et le compteur) par dessus l'image
+  width: 100%; //Prend toute la largeur disponible
+  height: 415px; //Hauteur fixe du slideshow
 
   &__image {
-    @include image-cover;
+    @include image-cover; //Utilise le mixin pour que l'image prenne toute la place du conteneur 
     border-radius: 25px;
   }
 
   &__arrow {
-    @include center-vertical;
-    @include button-reset;
+    @include center-vertical; //Utilise le mixin pour centrer verticalement les flèches
+    @include button-reset; //Utilise le mixin pour supprimer les styles par défaut du bouton
 
     img {
-      width: 40px;
+      width: 40px; //taille de l'image de la flèche
     }
 
     /* flèche gauche */
     &--left {
-      left: 20px;
+      left: 20px; //positionne la flèche à gauche
 
       img {
-        transform: rotate(90deg);
+        transform: rotate(90deg); //Tourne l'image pour qu'elle pointe vers la gauche
       }
     }
 
     /* flèche droite */
     &--right {
-      right: 20px;
+      right: 20px; //positionne la flèche à droite
 
       img {
-        transform: rotate(-90deg);
+        transform: rotate(-90deg); //Tourne l'image pour qu'elle pointe vers la droite
       }
     }
   }
 
   &__counter {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
+    position: absolute; //Permet de positionner le compteur par dessus l'image
+    bottom: 15px; //positionne le compteur en bas du slideshow
+    left: 50%; //positionne le compteur au centre horizontalement
+    transform: translateX(-50%); //Décale le compteur de la moitié de sa largeur pour le centrer parfaitement
+    color: white; //Couleur du texte
     font-size: 18px;
   }
 }

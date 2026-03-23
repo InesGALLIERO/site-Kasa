@@ -1,14 +1,15 @@
+//On importe les variables
 @use "../styles/variables.scss" as *;
 
 .logement__tags {
-  display: flex;
-  gap: 10px;
+  display: flex; //place les tags sur une ligne
+  gap: 10px; //Espace de 10px entre les tags
 }
 
 .logement__tag {
-  background: $color-primary;
-  color: $color-white;
-  padding: 5px 15px;
+  background: $color-primary; //Couleur de fond
+  color: $color-white; //Couleur du texte
+  padding: 5px 15px; //Espace à l'intérieur du tag (5px en haut et en bas, 15px à gauche et à droite)
   border-radius: 10px;
   font-size: 14px;
 
@@ -16,8 +17,8 @@
 
 @media (max-width: 768px) {
   .logement__tag{
-      width: 50%;
-      display: flex;
-      justify-content: center;
+      width: 50%; // chaque tag prend 50% de la largeur du conteneur
+      display: flex; //Permet de centrer le texte 
+      justify-content: center; //Centre le texte horizontalement
     }
 }

@@ -1,27 +1,27 @@
 // mixin pour centrer avec flex
 @mixin flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; //Active le mode flexbox pour le conteneur
+  align-items: center; //Centre les éléments verticalement
+  justify-content: center; //Centre les éléments horizontalement
 }
 
 // mixin pour positionner au centre vertical
 @mixin center-vertical {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: absolute; //permet de placer l'élément librement
+  top: 50%; //Place le haut de l'élément à 50% de la hauteur du conteneur
+  transform: translateY(-50%); //Remonte de moitié pour un vrai centrage 
 }
 
 // mixin pour image responsive
 @mixin image-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%; //Prend toute la largeur
+  height: 100%; //Prend toute la hauteur
+  object-fit: cover; //Couvre le conteneur sans déformer l'image
 }
 
 // mixin bouton invisible
 @mixin button-reset {
-  background: none;
-  border: none;
-  cursor: pointer;
+  background: none; //enlève le fond du bouton
+  border: none; //enlève la bordure du bouton
+  cursor: pointer; //affiche le curseur "clic"
 }

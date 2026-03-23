@@ -1,9 +1,9 @@
 .logement__rating {
-  display: flex;
-  gap: 5px;
+  display: flex; //Place les étoiles sur une ligne
+  gap: 5px; //Espace de 5px entre les étoiles
 
   img {
-    width: 25px;
-    height: 25px;
+    width: 25px; //Largeur de 25px pour les étoiles
+    height: 25px; //Hauteur de 25px pour les étoiles
   }
 }

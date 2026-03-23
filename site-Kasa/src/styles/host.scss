@@ -1,17 +1,20 @@
+//On importe les variables de couleurs depuis le fichier variables.scss
 @use "./variables.scss" as *;
+
 .logement__host {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex; //Place les éléments (nom + photo) sur une ligne
+  align-items: center; //Centre les élements verticalement
+  gap: 10px; //Espace de 10px entre le nom et la photo
+
+  &-name {
+  font-size: 16px; //Taille du texte du nom de l'hôte
+  color: $color-primary; //Couleur du texte du nom de l'hôte, définie dans variables.scss
+  }
+
+  &-picture {
+  width: 50px; //Largeur de la photo de l'hôte
+  height: 50px; //Hauteur de la photo de l'hôte
+  border-radius: 50%; //Arrondit les coins de la photo pour la rendre circulaire
+  }
 }
 
-.logement__host-name {
-  font-size: 16px;
-  color: $color-primary;
-}
-
-.logement__host-picture {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
